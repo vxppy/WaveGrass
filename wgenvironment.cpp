@@ -95,7 +95,7 @@ wg::Object operate(std::vector<Token> tokens, Environment &env) noexcept
                 }
                 else
                 {
-                    auto &val = env.getVariable(token.value());
+                    auto val = env.getVariable(token.value());
                     if (!val.undefined())
                     {
                         value.push_back(val.value());
